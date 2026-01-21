@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intro to Web – Class Homepage</title>
+  <meta name="description" content="A simple HTML-only class homepage demonstrating semantic layout, links, tables, and forms with all input types." />
+</head>
+<body>
+
+  <!-- ====== HEADER & NAVIGATION ====== -->
+  <header>
+    <h1>Intro to Web Development</h1>
+    <p>Welcome to the course! Explore the sections below to get started.</p>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li>#aboutAbout the Class</a></li>
+        <li>#scheduleSchedule (Table)</a></li>
+        <li>#resourcesResources & Links</a></li>
+        <li>#signupSignup Form (All Input Types)</a></li>
+        <li>#contactContact & Footer</a></li>
+      </ul>
+    </nav>
+    <hr />
+  </header>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main id="about">
+    <section>
+      <h2>About the Class</h2>
+      <article>
+        <h3>What You’ll Learn</h3>
+        <p>
+          This course introduces core web concepts, including semantic HTML, links, tables,
+          and working with forms and input types. Scroll down for a live demonstration of each.
+        </p>
+      </article>
+
+      <aside>
+        <h3>Quick Tips</h3>
+        <ul>
+          <li>Use semantic elements for structure.</li>
+          <li>Always pair <code>&lt;label&gt;</code> with form controls.</li>
+          <li>Prefer accessible names and captions for tables.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- ====== TABLE EXAMPLE ====== -->
+    <section id="schedule">
+      <h2>Class Schedule (Table Example)</h2>
+      <p>This table uses <code>caption</code>, <code>thead</code>, <code>tbody</code>, and <code>tfoot</code>.</p>
+
+      <table border="1">
+        <caption>Week-by-Week Outline</caption>
+        <thead>
+          <tr>
+            <th scope="col">Week</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Reading</th>
+            <th scope="col">Due</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>HTML Basics &amp; Semantics</td>
+            <td>Ch. 1–2</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Links, Lists, &amp; Media</td>
+            <td>Ch. 3</td>
+            <td>Quiz 1</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Tables &amp; Forms</td>
+            <td>Ch. 4–5</td>
+            <td>Project Proposal</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td colspan="2">Midterm Review &amp; Practice</td>
+            <td>Midterm</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Note: Schedule is subject to change.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- ====== LINKS EXAMPLE ====== -->
+    <section id="resources">
+      <h2>Resources &amp; Links</h2>
+      <ul>
+        <li>
+          External link:
+          <a href="https://developerorg/en-US/docs/Web/HTML
+            MDN – HTML Docs
+          </a>
+        </li>
+        <li>
+          Internal anchor link: #signupJump to the Signup Form</a>
+        </li>
+        <li>
+          Email link: <a href="mailto:instructoredu?subject=Intro%20to%20Web%20QuestionEmail the Instructor</a>
+        </li>
+        <li>
+          Telephone link: tel:+15551234567Call the Office: +1 (555) 123‑4567</a>
+        </li>
+        <li>
+          Download link:
+          <a href="syllownload Syllabus (PDF)</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ====== FORM WITH ALL INPUT TYPES ====== -->
+    <section id="signup">
+      <h2>Signup Form (All Common Input Types)</h2>
+      <p>
+        This form demonstrates labels, fieldsets, required fields, placeholders, patterns, and a variety of input controls.
+      </p>
+
+      #
+        <!-- Hidden input -->
+        <input type="hidden" name="form_id" value="intro-web-2026" />
+
+        <fieldset>
+          <legend>Basic Info</legend>
+
+          <p>
+            <label for="fullname">Full Name:</label><br />
+            <input type="text" id="fullname" name="fullname" placeholder="e.g., Jordan Lee" required />
+          </p>
+
+          <p>
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" placeholder="jordan@example.com" required />
+          </p>
+
+          <p>
+            <label for="password">Password:</label><br />
+            <input type="password" id="password" name="password" minlength="8" placeholder="Min. 8 characters" required />
+          </p>
+
+          <p>
+            <label for="username">Username (letters &amp; numbers only):</label><br />
+            <input type="text" id="username" name="username" pattern="[A-Za-z0-9]{4,16}" placeholder="4–16 chars" />
+          </p>
+
+          <p>
+            <label for="tel">Phone:</label><br />
+            <input type="tel" id="tel" name="tel" placeholder="+1 555 123 4567" />
+          </p>
+
+          <p>
+            <label for="url">Portfolio URL:</label><br />
+            <input type="url" id="url" name="url" placeholder="https://example.com" />
+          </p>
+
+          <p>
+            <label for="search">Search interests:</label><br />
+            <input type="search" id="search" name="search" placeholder="Type to search..." />
+          </p>
+
+          <p>
+            <label for="bio">Short Bio:</label><br />
+            <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us about yourself..."></textarea>
+          </p>
+
+          <p>
+            <label for="avatar">Profile Photo (file):</label><br />
+            <input type="file" id="avatar" name="avatar" accept=".jpg,.jpeg,.png" />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences &amp; Options</legend>
+
+          <p>
+            <label for="number">Preferred Team Size (1–10):</label><br />
+            <input type="number" id="number" name="team_size" min="1" max="10" value="3" />
+          </p>
+
+          <p>
+            <label for="range">Experience Level (0–10):</label><br />
+            <input type="range" id="range" name="experience" min="0" max="10" value="5" />
+          </p>
+
+          <p>
+            <span>Notify me about:</span><br />
+            <label>
+              <input type="checkbox" name="notify_news" checked />
+              News
+            </label>
+            <label>
+              <input type="checkbox" name="notify_assignments" />
+              Assignments
+            </label>
+            <label>
+              <input type="checkbox" name="notify_grades" />
+              Grades
+            </label>
+          </p>
+
+          <p>
+            <span>Preferred Session:</span><br />
+            <label>
+              <input type="radio" name="session" value="morning" checked />
+              Morning
+            </label>
+            <label>
+              <input type="radio" name="session" value="afternoon" />
+              Afternoon
+            </label>
+            <label>
+              <input type="radio" name="session" value="evening" />
+              Evening
+            </label>
+          </p>
+
+          <p>
+            <label for="color">Favorite Color:</label><br />
+            <input type="color" id="color" name="favorite_color" value="#3366ff" />
+          </p>
+
+          <p>
+            <label for="course">Course Track (select):</label><br />
+            <select id="course" name="course">
+              <option value="">— Choose a track —</option>
+              <option value="frontend">Front-End</option>
+              <option value="backend">Back-End</option>
+              <option value="fullstack">Full-Stack</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="electives">Electives (multiple select):</label><br />
+            <select id="electives" name="electives" multiple size="4">
+              <option value="accessibility">Accessibility</option>
+              <option value="testing">Testing</option>
+              <option value="security">Security</option>
+              <option value="devops">DevOps</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="topic">Topic (with datalist):</label><br />
+            <input list="topics" id="topic" name="topic" placeholder="Start typing..." />
+            <datalist id="topics">
+              <option value="HTML" />
+              <option value="CSS" />
+              <option value="JavaScript" />
+              <option value="Accessibility" />
+              <option value="Performance" />
+            </datalist>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dates &amp; Time</legend>
+
+          <p>
+            <label for="date">Start Date:</label><br />
+            <input type="date" id="date" name="start_date" />
+          </p>
+
+          <p>
+            <label for="time">Preferred Time:</label><br />
+            <input type="time" id="time" name="preferred_time" />
+          </p>
+
+          <p>
+            <label for="datetime">Interview (local):</label><br />
+            <input type="datetime-local" id="datetime" name="interview_dt" />
+          </p>
+
+          <p>
+            <label for="month">Target Graduation Month:</label><br />
+            <input type="month" id="month" name="grad_month" />
+          </p>
+
+          <p>
+            <label for="week">Project Week:</label><br />
+            <input type="week" id="week" name="project_week" />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Special Inputs</legend>
+
+          <p>
+            <label for="imagebtn">Image Button (acts like submit):</label><br />
+            <!-- You can replace the src with any local image -->
+            https://via.placeholder.com/120x40.png?text=Submit
+          </p>
+
+          <p>
+            <button type="button" onclick="alert('This is a plain button (no submit).')">Plain Button</button>
+          </p>
+
+          <p>
+            <input type="reset" value="Reset Form" />
+            <input type="submit" value="Submit Form" />
+          </p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer id="contact">
+    <hr />
+    <p><strong>Instructor:</strong> Your Name • mailto:instructor@example.eduinstructor@example.edu</a> • tel:+15551234567+1 (555) 123‑4567</a></p>
+    <p>
+      #topBack to top</a> •
+      #aboutAbout</a> •
+      #scheduleSchedule</a> •
+      #resourcesResources</a> •
+      <a href="#signup>
+    </p>
+    <p>&copy; <span id="year">2026</span> Intro to Web Development</p>
+  </footer>
+
+  <!-- Optional: minimal inline script-free enhancement using NOSCRIPT-friendly defaults.
+       Since you asked for HTML only, we won't include JavaScript here. -->
+</body>
+</html>
